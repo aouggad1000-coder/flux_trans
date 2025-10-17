@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_PASSWORD: transitflow
+    ports: ["5432:5432"]
+  mailhog:
+    image: mailhog/mailhog
+    ports: ["1025:1025", "8025:8025"]
+  redis:
+    image: redis:7
+    ports: ["6379:6379"]
